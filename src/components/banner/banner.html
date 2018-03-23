@@ -1,0 +1,21 @@
+<ion-content class="card-background-page">
+  <ion-card *ngIf="product?.type == 'plan'" class="banner-card" [style.backgroundImage]="'url('+ product?.backgroundImg +')'">
+    <div class="card-grid">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>{{ product?.productDescription }}</p>
+            <button ion-button color="light" outline (click)="goToLink(product?.link)">{{ product?.buttonText }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+  <ion-card *ngIf="product?.type == 'cellphone'" class="banner-card">
+    <img [src]="product?.productImg" class="product-img" />
+    <div class="card-product-grid">
+      <p>{{ product?.productName }}</p>
+      <p class="subtitle">{{ product?.productDescription }}</p>
+    </div>
+  </ion-card>
+</ion-content>

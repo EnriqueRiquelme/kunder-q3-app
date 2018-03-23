@@ -1,4 +1,4 @@
-<ion-content class="card-background-page">
+<ion-content class="card-background-page" *ngIf="product?.show">
   <ion-card *ngIf="product?.type == 'plan'" class="banner-card" [style.backgroundImage]="'url('+ product?.backgroundImg +')'">
     <div class="card-grid">
       <ion-grid>
